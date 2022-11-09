@@ -10,6 +10,15 @@ const registerCtrl = async ({ body }: Request, res: Response) => {
   res.send(responseUser);
 };
 
-const loginCtrl = async () => {};
+const loginCtrl = async ({ body }: Request, res: Response) => {
+  const { email, password } = body;
+  const responseUser = await loginUser({ email, password });
+  if (responseUser === "INVALID_CREDENTIALS") {
+    res.status(403);
+    res.send(responseUser);
+  } else {
+    res.send(responseUser);
+  }
+};
 
 export { registerCtrl, loginCtrl };
