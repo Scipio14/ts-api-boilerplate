@@ -1,0 +1,9 @@
+###CREATE NEW USER
+POST http://localhost:3333/auth/register
+Content-Type: application/json
+
+{
+  "name":"sertorius",
+  "email":"sertorius@scipio.com",
+  "password":"12345678"
+}

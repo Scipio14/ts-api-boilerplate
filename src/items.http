@@ -1,0 +1,5 @@
+### GET ALL CARS
+GET http://localhost:3333/item
+
+###GET ONE CAR
+GET http://localhost:3333/item/636af7eeb7527b015678baf0
